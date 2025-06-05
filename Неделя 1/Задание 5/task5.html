@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Шахматы — королевская игра</title>
+        <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        h1 {
+            font-size: 50px;
+            text-align: center;
+            color: #006400;
+        }
+        h2 {
+            font-size: 40px;
+            color: #006400;
+        }
+        p {
+            font-size: 20px;
+            line-height: 1.5;
+        }
+        header, footer {
+            background-color: #1a1a1a;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            font-size: 18px;
+            margin: 0 15px;
+            text-decoration: none;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        img {
+            border-radius: 10px;
+            margin: 10px;
+        }
+        table {
+            width: 80%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            font-size: 20px;
+            background-color: #f8f8f8;
+        }
+        th, td {
+            border: 2px solid #006400;
+            padding: 10px;
+            text-align: center;
+        }
+        th {
+            background-color: #006400;
+            color: white;
+        }
+    </style>
+    </head>
+    <body>
+        <header>
+            <img src="https://w7.pngwing.com/pngs/937/294/png-transparent-board-game-ball-game-icon-international-chess-game-white-video-game-thumbnail.png" alt="Логотип" width="100">
+            <nav>
+                <a href="#about">О шахматах</a>
+                <a href="#chacters">Фигуры</a>
+            </nav>
+        </header>
+        <main>
+            <h1>Шахматы — королевская игра</h1>
+            <h2 id="about">Что такое шахматы?</h2>
+            <p>Шахматы — это стратегическая настольная игра, в которой два игрока поочередно передвигают фигуры на доске 8x8.</p>
+            <p>Цель игры — поставить королю соперника шах и мат. Игра развивает логику, мышление и терпение.</p>
+
+            <h2 id="chacters">Основные фигуры</h2>
+            <p>Ниже представлена таблица с полным описанием всех шахматных фигур:</p>
+            <table>
+                <tr>
+                    <th>Фигура</th>
+                    <th>Количество</th>
+                    <th>Ход</th>
+                    <th>Особенности</th>
+                </tr>
+                <tr>
+                    <td>Король</td>
+                    <td>1</td>
+                    <td>На 1 клетку в любом направлении</td>
+                    <td>Нельзя подставлять под шах, участвует в рокировке</td>
+                </tr>
+                <tr>
+                    <td>Ферзь</td>
+                    <td>1</td>
+                    <td>Любое число клеток по прямой и диагонали</td>
+                    <td>Самая сильная фигура</td>
+                </tr>
+                <tr>
+                    <td>Ладья</td>
+                    <td>2</td>
+                    <td>Любое число клеток по вертикали и горизонтали</td>
+                    <td>Участвует в рокировке</td>
+                </tr>
+                <tr>
+                    <td>Слон</td>
+                    <td>2</td>
+                    <td>Любое число клеток по диагонали</td>
+                    <td>Один ходит по белым, другой по чёрным клеткам</td>
+                </tr>
+                <tr>
+                    <td>Конь</td>
+                    <td>2</td>
+                    <td>Буквой «Г» (2+1 клетки)</td>
+                    <td>Может прыгать через другие фигуры</td>
+                </tr>
+                <tr>
+                    <td>Пешка</td>
+                    <td>8</td>
+                    <td>На 1 клетку вперёд (или 2 с начальной), бьёт по диагонали</td>
+                    <td>Может превращаться в любую фигуру, есть взятие на проходе</td>
+                </tr>
+            </table>
+            <img src="https://w7.pngwing.com/pngs/184/113/png-transparent-chessboard-chess-piece-ajedrez-king-pin-queen-thumbnail.png" alt="Шахматная доска" width="500">
+            <img src="https://w7.pngwing.com/pngs/536/989/png-transparent-chess-piece-chess-piece-knight-rook-chess-pieces-game-text-hand-thumbnail.png" alt="Набор шахмат" width="300">
+            <h2>Основные этапы партии</h2>
+            <table>
+                <tr>
+                    <th>Этап</th>
+                    <th>Цель</th>
+                    <th>Особенности</th>
+                </tr>
+                <tr>
+                    <td>Открытие</td>
+                    <td>Развитие фигур и контроль центра</td>
+                    <td>Быстрый выход лёгких фигур</td>
+                </tr>
+                <tr>
+                    <td>Миттельшпиль</td>
+                    <td>Атака и защита</td>
+                    <td>Комбинации и тактика</td>
+                </tr>
+                <tr>
+                    <td>Эндшпиль</td>
+                    <td>Использование короля и пешек</td>
+                    <td>Точная техника выигрыша</td>
+                </tr>
+            </table>
+            <h2>Оставить отзыв</h2>
+            <form>
+                <label for="name">Ваше имя:</label><br>
+                <input type="text" id="name" name="name" required><br><br>
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email" required><br><br>
+                <label for="review">Ваш отзыв:</label><br>
+                <textarea id="review" name="review" rows="5" cols="50" required></textarea><br><br>
+                <input type="submit" value="Отправить">
+            </form>
+        </main>
+        <footer>
+            <p>© 2025 Шахматы — королевская игра</p>
+            <p>Адрес: г. Москва, ул. Логики, д. 64</p>
+            <p>Телефон: +7 (495) 123-45-67</p>
+            <a href="https://vk.com/f.chess" target="_blank">
+                <img src="https://cdn-icons-png.flaticon.com/512/145/145813.png" alt="VK" width="100">
+            </a>
+        </footer>
+    </body>
+</html>
