@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UI-комплект</title>
+    <style>
+        :root {
+            --primary-color: #2196F3;
+            --accent-color: #4CAF50;
+            --border-color: #ccc;
+            --background: #f9f9f9;
+            --card-bg: #ffffff;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            max-width: 700px;
+            margin: 2rem auto;
+            padding: 1.5rem;
+            background-color: var(--background);
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            color: #333;
+            line-height: 1.6;
+        }
+
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 2rem;
+            font-size: 2rem;
+            letter-spacing: 1px;
+        }
+
+        .ui-group {
+            margin-bottom: 1.5rem;
+            background: var(--card-bg);
+            padding: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+            transition: transform 0.2s ease;
+        }
+
+        .ui-group:hover {
+            transform: translateX(5px);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: #2c3e50;
+            font-size: 0.95rem;
+        }
+
+        .input-wrapper {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .input-wrapper > * {
+            margin-bottom: 0.5rem;
+        }
+
+        input[type="text"],
+        input[type="date"],
+        input[type="range"],
+        select,
+        progress {
+            width: 100%;
+            padding: 0.75rem;
+            border: 2px solid var(--border-color);
+            border-radius: 6px;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            box-sizing: border-box;
+        }
+
+        input[type="text"]:focus,
+        input[type="date"]:focus,
+        select:focus {
+            border-color: var(--primary-color);
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(33, 150, 243, 0.2);
+        }
+
+        input[type="checkbox"],
+        input[type="radio"] {
+            margin-right: 0.5rem;
+        }
+
+        button {
+            background-color: var(--accent-color);
+            color: white;
+            padding: 0.75rem 1.25rem;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 1.1rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(76, 175, 80, 0.3);
+        }
+
+        button:hover {
+            background-color: #388E3C;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(76, 175, 80, 0.4);
+        }
+
+        .checkbox-label,
+        .radio-label {
+            display: flex;
+            align-items: center;
+            margin-bottom: 0.5rem;
+        }
+
+        progress {
+            height: 24px;
+            border-radius: 12px;
+            overflow: hidden;
+            background-color: #e0e0e0;
+        }
+
+        progress::-webkit-progress-bar {
+            background-color: #e0e0e0;
+            border-radius: 12px;
+        }
+
+        progress::-webkit-progress-value {
+            background-color: var(--accent-color);
+            border-radius: 12px;
+        }
+
+        @media (max-width: 500px) {
+            body {
+                margin: 1rem;
+                padding: 1rem;
+            }
+            
+            .ui-group {
+                padding: 0.75rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>UI-комплект</h1>
+
+    <!-- Текстовое поле -->
+    <div class="ui-group">
+        <label for="text-field">Текстовое поле:</label>
+        <input type="text" id="text-field" placeholder="Введите текст">
+    </div>
+
+    <!-- Кнопка -->
+    <div class="ui-group">
+        <button id="submit-button">Отправить</button>
+    </div>
+
+    <!-- Выпадающий список -->
+    <div class="ui-group">
+        <label for="dropdown">Выпадающий список:</label>
+        <select id="dropdown" aria-label="Выберите опцию">
+            <option value="option1">Опция 1</option>
+            <option value="option2">Опция 2</option>
+            <option value="option3">Опция 3</option>
+        </select>
+    </div>
+
+    <!-- Чекбокс -->
+    <div class="ui-group">
+        <label>Чекбокс:</label>
+        <div class="checkbox-label">
+            <input type="checkbox" id="checkbox1" aria-label="Выбрать">
+            <label for="checkbox1">Выбрать</label>
+        </div>
+    </div>
+
+    <!-- Радиокнопка -->
+    <div class="ui-group">
+        <label>Радиокнопки:</label>
+        <div class="radio-label">
+            <input type="radio" id="radio1" name="radio-group" aria-label="Вариант 1">
+            <label for="radio1">Вариант 1</label>
+        </div>
+        <div class="radio-label">
+            <input type="radio" id="radio2" name="radio-group" aria-label="Вариант 2">
+            <label for="radio2">Вариант 2</label>
+        </div>
+    </div>
+
+    <!-- Метка с чекбоксом (inline) -->
+    <div class="ui-group">
+        <label class="checkbox-label">
+            <input type="checkbox" id="inline-checkbox" aria-label="Метка с чекбоксом">
+            <span>Метка с чекбоксом</span>
+        </label>
+    </div>
+
+    <!-- Метка с радиокнопкой (inline) -->
+    <div class="ui-group">
+        <label class="radio-label">
+            <input type="radio" id="inline-radio" name="inline-radio-group" aria-label="Метка с радиокнопкой">
+            <span>Метка с радиокнопкой</span>
+        </label>
+    </div>
+
+    <!-- Выпадающий календарь -->
+    <div class="ui-group">
+        <label for="date-picker">Выберите дату:</label>
+        <input type="date" id="date-picker" aria-label="Выберите дату">
+    </div>
+
+    <!-- Диапазон (слайдер) -->
+    <div class="ui-group">
+        <label for="range-slider">Диапазон:</label>
+        <input type="range" id="range-slider" min="0" max="100" value="50" aria-label="Ползунок диапазона">
+    </div>
+
+    <!-- Прогресс-бар -->
+    <div class="ui-group">
+        <label for="progress-bar">Прогресс-бар:</label>
+        <progress id="progress-bar" value="75" max="100" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></progress>
+    </div>
+</body>
+</html>
